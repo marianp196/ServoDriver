@@ -16,3 +16,6 @@ nbdist/
 /I2CHttpTest/target/
 /PVMDriver/target/
 /ServoDriver/ServoDriver.Abstractions/target/
+/ServoDriver.Abstractions/target/
+/ServoDriver.Raspberry/target/
+/ServoDriver.HTTP/target/

@@ -6,7 +6,6 @@
 package drivers;
 
 import domain.Led;
-import driver.IPVMBoardDriver;
 
 /**
  *
@@ -14,8 +13,8 @@ import driver.IPVMBoardDriver;
  */
 public class ServoDriver implements IStepMotorDriver{
 
-    public ServoDriver(Led pvmDriver) {
-        _led = pvmDriver;
+    public ServoDriver(Led led) {
+        _led = led;
     }    
     
     @Override
@@ -33,8 +32,10 @@ public class ServoDriver implements IStepMotorDriver{
     @Override
     public double GetRotation() throws Exception {
         int highPeriod = (int)_led.GetEndHigh() - (int)_led.GetStartHigh();
+        
         if(highPeriod < _signalMinLength || highPeriod > (_signalMinLength + _signalLength))
             throw new Exception("Not valid Signal. Length: " + highPeriod );
+        
         return (highPeriod - _signalMinLength) / _signalLength;
     }
     

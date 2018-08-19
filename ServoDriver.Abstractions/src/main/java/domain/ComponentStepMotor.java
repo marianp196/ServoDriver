@@ -8,12 +8,13 @@ package domain;
 import component.IWriteableComponent;
 import domain.dto.Movement;
 import domain.dto.Rotation;
-import drivers.IStepMotorDriver;
 
 /**
  *
  * @author marian
  */
+
+//ToDo Gehört eigentlich nicht AbstractionsOrdner
 public class ComponentStepMotor implements IStepMotor ,IWriteableComponent<Movement, Rotation>{
 
     
@@ -48,10 +49,12 @@ public class ComponentStepMotor implements IStepMotor ,IWriteableComponent<Movem
         if(state.StepDegree == null)
             this.SetRotation(state.EndDegree);
       
-        this.Move(state.EndDegree, state.StepDegree, state.Wait == null ? 0 : state.Wait);
+        this.Move(state.EndDegree, state.StepDegree, 
+                state.Wait == null ? 0 : state.Wait);
         
         Rotation rotation = new Rotation();
         rotation.Degree = state.EndDegree;
+        rotation.MaxRotationDegree = this.GetMaxRotation();
         return rotation;
     }
 

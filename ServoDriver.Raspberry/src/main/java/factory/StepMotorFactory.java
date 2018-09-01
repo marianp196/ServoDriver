@@ -17,7 +17,7 @@ import drivers.ServoDriver;
  */
 public class StepMotorFactory implements IStepMotorFactory{
 
-    public StepMotorFactory(IPvmBoardFactory pvmBoardFactory, int device) throws Exception {
+    public StepMotorFactory(IPvmBoardFactory pvmBoardFactory) throws Exception {
        _pvmBoard = pvmBoardFactory.Build(50);
     }    
     

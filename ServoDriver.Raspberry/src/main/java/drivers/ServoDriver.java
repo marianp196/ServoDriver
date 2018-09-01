@@ -41,6 +41,6 @@ public class ServoDriver implements IStepMotorDriver{
     
     private Led _led;    
     
-    private int _signalMinLength = 200;
-    private int _signalLength = 200;
+    private double _signalMinLength = 0.5 / 20.0;
+    private double _signalLength = 2.0 / 20.0;
 }

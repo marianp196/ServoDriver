@@ -95,9 +95,7 @@ public class HTTPStepMotor implements IStepMotor{
          Request request = new Request.Builder()
         .url(url)
         .get()
-        //.addHeader("Content-Type", "application/json")
         .addHeader("Accept", "application/json")
-        //.addHeader("Cache-Control", "no-cache")
         .build();
 
         return request;
@@ -124,7 +122,7 @@ public class HTTPStepMotor implements IStepMotor{
         if(!result.endsWith("/"))
             result+= "/";
         
-        result = result + "servo/pvmdriver/" + String.valueOf(id); //ToDo pvmDriver muss hier raus
+        result += "servo/pvmdriver/" + String.valueOf(id); //ToDo pvmDriver muss hier raus
         return result;
     }
     

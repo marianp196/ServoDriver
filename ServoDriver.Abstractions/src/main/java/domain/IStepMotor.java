@@ -5,11 +5,6 @@
  */
 package domain;
 
-import component.IComponent;
-import component.IWriteableComponent;
-import domain.dto.Movement;
-import domain.dto.Rotation;
-
 /**
  *
  * @author marian

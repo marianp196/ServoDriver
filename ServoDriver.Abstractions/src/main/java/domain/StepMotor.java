@@ -5,8 +5,6 @@
  */
 package domain;
 
-import domain.dto.Movement;
-import domain.dto.Rotation;
 import drivers.IStepMotorDriver;
 /**
  *

@@ -9,7 +9,7 @@ package drivers;
  *
  * @author marian
  */
-public interface IStepMotorDriver {
+public interface IServoMotorDriver {
     /**
      * Zahl zwische 0 und 1
      * 

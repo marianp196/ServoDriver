@@ -7,20 +7,20 @@ package factory;
 
 import com.squareup.okhttp.OkHttpClient;
 import domain.HTTPStepMotor;
-import domain.IStepMotor;
+import domain.IServoMotor;
 
 /**
  *
  * @author marian
  */
-public class HTTPStepMotorFactory implements IStepMotorFactory {
+public class HTTPStepMotorFactory implements IServoMotorFactory {
 
     public HTTPStepMotorFactory(String baseUrl) {
         this._baseUrl = baseUrl;
     }
        
     @Override
-    public IStepMotor Build(int pin) throws Exception {
+    public IServoMotor Build(int pin) throws Exception {
         OkHttpClient http = new OkHttpClient();
         return new HTTPStepMotor(pin, http, _baseUrl);
     }

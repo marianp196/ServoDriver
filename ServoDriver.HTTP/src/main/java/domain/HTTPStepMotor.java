@@ -12,8 +12,8 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
-import domain.dto.Movement;
-import domain.dto.Rotation;
+import compImpl.dto.Movement;
+import compImpl.dto.Rotation;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,7 +22,7 @@ import java.util.logging.Logger;
  *
  * @author marian
  */
-public class HTTPStepMotor implements IStepMotor{
+public class HTTPStepMotor implements IServoMotor{
 
     public HTTPStepMotor(int id, OkHttpClient http, String baseUrl) {
         this._id = id;

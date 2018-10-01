@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain;
+package compImpl;
 
 import component.IWriteableComponent;
-import domain.dto.Movement;
-import domain.dto.Rotation;
+import compImpl.dto.Movement;
+import compImpl.dto.Rotation;
+import domain.IServoMotor;
 
 /**
  *
@@ -15,10 +16,10 @@ import domain.dto.Rotation;
  */
 
 //ToDo Gehört eigentlich nicht AbstractionsOrdner
-public class ComponentStepMotor implements IStepMotor ,IWriteableComponent<Movement, Rotation>{
+public class ComponentServoMotor implements IServoMotor ,IWriteableComponent<Movement, Rotation>{
 
     
-    public ComponentStepMotor(IStepMotor stepMotor, String groupId, String id) {
+    public ComponentServoMotor(IServoMotor stepMotor, String groupId, String id) {
         _stepMotor = stepMotor;
         _id = id;
         _groupId = groupId;
@@ -76,7 +77,7 @@ public class ComponentStepMotor implements IStepMotor ,IWriteableComponent<Movem
         return _groupId;
     }
     
-    private IStepMotor _stepMotor;
+    private IServoMotor _stepMotor;
     private String _id;
     private String _groupId;
 }

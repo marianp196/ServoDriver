@@ -11,7 +11,7 @@ import domain.Led;
  *
  * @author marian
  */
-public class ServoDriver implements IStepMotorDriver{
+public class ServoDriver implements IServoMotorDriver{
 
     public ServoDriver(Led led) {
         _led = led;

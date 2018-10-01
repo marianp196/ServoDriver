@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domain.dto;
+package compImpl.dto;
 
 /**
  *
  * @author marian
  */
-public class Movement {
-    public double EndDegree;
-    public Double StepDegree;
-    public Integer Wait;
+public class Rotation {
+    public double Degree;
+    public double MaxRotationDegree;
 }

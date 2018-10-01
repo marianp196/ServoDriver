@@ -9,7 +9,7 @@ package domain;
  *
  * @author marian
  */
-public interface IStepMotor{
+public interface IServoMotor{
 
     double GetMaxRotation();
 

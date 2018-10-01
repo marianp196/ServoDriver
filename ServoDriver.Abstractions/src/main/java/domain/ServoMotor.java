@@ -5,14 +5,14 @@
  */
 package domain;
 
-import drivers.IStepMotorDriver;
+import drivers.IServoMotorDriver;
 /**
  *
  * @author marian
  */
-public class StepMotor implements IStepMotor {
+public class ServoMotor implements IServoMotor {
 
-    public StepMotor(IStepMotorDriver driver) {
+    public ServoMotor(IServoMotorDriver driver) {
         _driver = driver;
     }
      
@@ -88,5 +88,5 @@ public class StepMotor implements IStepMotor {
     }
     
     
-    private IStepMotorDriver _driver;
+    private IServoMotorDriver _driver;
 }

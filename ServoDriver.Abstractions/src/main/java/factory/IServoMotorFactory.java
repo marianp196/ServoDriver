@@ -5,13 +5,12 @@
  */
 package factory;
 
-import domain.IStepMotor;
-import domain.StepMotor;
+import domain.IServoMotor;
 
 /**
  *
  * @author marian
  */
-public interface IStepMotorFactory {
-    IStepMotor Build(int pin) throws Exception;
+public interface IServoMotorFactory {
+    IServoMotor Build(int pin) throws Exception;
 }

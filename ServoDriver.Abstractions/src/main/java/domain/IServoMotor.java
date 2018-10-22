@@ -5,13 +5,15 @@
  */
 package domain;
 
+import domain.unitCalc.IUnitTranslator;
+
 /**
  *
  * @author marian
  */
 public interface IServoMotor{
 
-    double GetMaxRotation();
+    double GetMaxRotationDegree();
 
     /**
      * 
@@ -20,8 +22,10 @@ public interface IServoMotor{
      * @param wait milliseconds
      */
     void Move(double endDegree, double step, int wait) throws Exception;
+    void Move(IUnitTranslator endDegree, double step, int wait) throws Exception;
 
     void SetRotation(double degree) throws Exception;
+    void SetRotation(IUnitTranslator degree) throws Exception;
     
-    double GetRotation() throws Exception;    
+    double GetRotationDegree() throws Exception;    
 }

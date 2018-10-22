@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package compImpl.dto;
+package domain.unitCalc;
 
 /**
  *
  * @author marian
  */
-public class Rotation {
-    public double Degree;
-    public double MaxRotationDegree;
+public interface IUnitTranslator {
+    double GetValueInDegree();
 }

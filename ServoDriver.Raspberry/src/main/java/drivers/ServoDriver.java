@@ -41,6 +41,6 @@ public class ServoDriver implements IServoMotorDriver{
     
     private Led _led;    
     
-    private double _signalMinLength = 0.5 / 20.0;
-    private double _signalLength = 2.0 / 20.0;
+    private double _signalMinLength = 1 / 20.0;
+    private double _signalLength = 5 / 20.0;
 }

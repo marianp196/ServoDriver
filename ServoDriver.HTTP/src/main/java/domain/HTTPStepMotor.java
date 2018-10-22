@@ -12,8 +12,9 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
-import compImpl.dto.Movement;
-import compImpl.dto.Rotation;
+import componentInterfaceImpl.dto.Movement;
+import componentInterfaceImpl.dto.Rotation;
+import domain.unitCalc.IUnitTranslator;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -31,7 +32,7 @@ public class HTTPStepMotor implements IServoMotor{
     }
        
     @Override
-    public double GetMaxRotation() {
+    public double GetMaxRotationDegree() {
         try {
             return get(_baseUrl, _id).MaxRotationDegree;
         } catch (Exception ex) {
@@ -57,8 +58,18 @@ public class HTTPStepMotor implements IServoMotor{
     }
 
     @Override
-    public double GetRotation() throws Exception {
+    public double GetRotationDegree() throws Exception {
         return get(_baseUrl, _id).Degree;
+    }
+    
+    @Override
+    public void Move(IUnitTranslator endDegree, double step, int wait) throws Exception {
+        Move(endDegree.GetValueInDegree(), step, wait);
+    }
+
+    @Override
+    public void SetRotation(IUnitTranslator degree) throws Exception {
+        SetRotation(degree.GetValueInDegree());
     }
     
     private Rotation post(String baseUrl, int id, Movement movement) throws Exception{

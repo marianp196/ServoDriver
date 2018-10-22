@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factory;
+package servoFactory;
 
+import servoFactory.IServoMotorFactory;
 import domain.PVMBoard;
 import domain.ServoMotor;
 import drivers.ServoDriver;
 import domain.IServoMotor;
 import drivers.IServoMotorDriver;
+import factory.IPvmBoardFactory;
 
 /**
  *

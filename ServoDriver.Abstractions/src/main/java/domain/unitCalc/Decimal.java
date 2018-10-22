@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package factory;
-
-import domain.IServoMotor;
+package domain.unitCalc;
 
 /**
  *
  * @author marian
  */
-public interface IServoMotorFactory {
-    IServoMotor Build(int pin) throws Exception;
+public class Decimal extends UnitTranslator {
+
+    public Decimal(double inputValue) {
+        super(inputValue, 360);
+    }
+    
 }

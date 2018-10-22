@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package compImpl.dto;
+package domain.unitCalc;
 
 /**
  *
  * @author marian
  */
-public class Movement {
-    public double EndDegree;
-    public Double StepDegree;
-    public Integer Wait;
+public class Bogenmass extends UnitTranslator {
+    
+    public Bogenmass(double inputValue) {
+        super(inputValue, (2*Math.PI) / 360);
+    }
+    
 }

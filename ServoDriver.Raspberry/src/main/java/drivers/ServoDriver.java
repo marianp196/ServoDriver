@@ -26,7 +26,13 @@ public class ServoDriver implements IServoMotorDriver{
     public void SetRotation(double rotation) throws Exception {
         if(rotation < 0 || rotation > 1)
             throw new IllegalArgumentException("rotation >= 0 and rotation <= 1");
-        _led.SetPeriod(0, _signalMinLength + _signalLength * rotation);
+        
+        System.out.println("Set rotation:  " + rotation);
+        
+        double signalLength = _signalMinLength + _signalLength * rotation;
+        System.out.println("Signallaenge:  " + signalLength);
+        
+        _led.SetPeriod(0, signalLength);
     }
 
     @Override
@@ -42,5 +48,5 @@ public class ServoDriver implements IServoMotorDriver{
     private Led _led;    
     
     private double _signalMinLength = 1 / 20.0;
-    private double _signalLength = 5 / 20.0;
+    private double _signalLength = 2 / 20.0;
 }
